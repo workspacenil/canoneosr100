@@ -2461,4 +2461,165 @@ button {
     .hud-title {
         font-size: 1.3rem;
     }
+
+    /* --------------------------------------------------------------------------
+       RESPONSIVE PARA SECCIONES NUEVAS EN TABLETS Y MÓVILES (max-width: 768px)
+       -------------------------------------------------------------------------- */
+
+    /* 1. Hero Rotator 360 en móvil */
+    .rotator-track {
+        height: 230vh;
+    }
+
+    .rotator-sticky-viewport {
+        padding: 70px 16px 20px;
+    }
+
+    .rotator-title {
+        font-size: 1.45rem;
+        line-height: 1.25;
+        margin: 6px 0;
+    }
+
+    .rotator-hint {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+        gap: 6px;
+    }
+
+    .rotator-stage {
+        height: 48vh;
+    }
+
+    #heroRotatingCanvas {
+        max-width: 100%;
+        max-height: 95%;
+    }
+
+    .rotator-badge {
+        padding: 8px 12px;
+        gap: 8px;
+    }
+
+    .rotator-badge strong {
+        font-size: 0.8rem;
+    }
+
+    .rotator-badge span {
+        font-size: 0.7rem;
+    }
+
+    .badge-front { top: 2%; left: 3%; }
+    .badge-side  { top: 2%; right: 3%; }
+    .badge-back  { bottom: 3%; left: 3%; }
+    .badge-top   { bottom: 3%; right: 3%; }
+
+    .rotator-progress-container {
+        max-width: 280px;
+        gap: 10px;
+    }
+
+    /* 2. Galería en Abanico Curvo en móvil */
+    .action-fan-section {
+        padding: 40px 0 60px;
+    }
+
+    .action-fan-container {
+        height: 380px;
+        transform: scale(0.65);
+        transform-origin: bottom center;
+    }
+
+    /* 3. Sección Liquid Glass en móvil */
+    .new-animation-section {
+        height: 55vh;
+        min-height: 380px;
+        cursor: auto !important;
+    }
+
+    .custom-cursor-dot,
+    .custom-cursor-ring {
+        display: none !important;
+    }
+
+    .interactive-text {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    /* 4. Botones y CTA en móvil */
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .btn-canon-primary,
+    .btn-canon-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   MÓVILES PEQUEÑOS Y SMARTPHONES ESTRECHOS (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .rotator-track {
+        height: 220vh;
+    }
+
+    .rotator-sticky-viewport {
+        padding: 65px 12px 16px;
+    }
+
+    .rotator-title {
+        font-size: 1.25rem;
+    }
+
+    .rotator-stage {
+        height: 44vh;
+    }
+
+    /* En smartphones estrechos, los badges solo muestran el titular para no tapar la cámara */
+    .rotator-badge {
+        padding: 6px 10px;
+    }
+
+    .rotator-badge span {
+        display: none;
+    }
+
+    .rotator-badge strong {
+        font-size: 0.75rem;
+    }
+
+    .badge-front { top: 0%; left: 2%; }
+    .badge-side  { top: 0%; right: 2%; }
+    .badge-back  { bottom: 0%; left: 2%; }
+    .badge-top   { bottom: 0%; right: 2%; }
+
+    /* Escala perfecta del abanico curvo para pantallas estrechas */
+    .action-fan-container {
+        height: 280px;
+        transform: scale(0.42);
+        transform-origin: bottom center;
+    }
+
+    .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .hero-metrics {
+        justify-content: space-between;
+    }
+
+    .metric-item {
+        width: 48%;
+    }
+
+    .hero-camera-image {
+        max-width: 95%;
+    }
 }
